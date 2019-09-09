@@ -1,4 +1,4 @@
-import Foundation
+import UIKit
 
 let lista = [2,4,3,1,5,6]
 
@@ -9,7 +9,7 @@ var reversa1 = lista.sorted { (a, b) -> Bool in
 print("reversa1 = ", reversa1)
 
 
-//infere o tipo pelo contexto (sorted é do tipo (Int, Int) -> Bool
+//infere o tipo pelo contexto (sorted é do tipo (Int, Int) -> Bool)
 var reversa2 = lista.sorted(by: {a, b in return a > b})
 print("reversa2 = ", reversa2)
 
