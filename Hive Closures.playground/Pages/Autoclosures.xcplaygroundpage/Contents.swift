@@ -16,3 +16,27 @@ print("lista = ", lista)
 
 
 
+func removeLista(item removido: () -> Int){
+	print("removi o item \(removido())")
+}
+
+print()
+print("ainda tenho \(lista.count) itens na lista")
+
+removeLista(item: {lista.remove(at: 0)})
+
+print("lista \(lista)agora com \(lista.count) itens")
+
+func removeListaAuto(item removido: @autoclosure () -> Int){
+	print("removi o item \(removido())")
+}
+
+print()
+print("ainda tenho \(lista.count) itens na lista")
+
+removeListaAuto(item: lista.remove(at: 0))
+
+print("lista \(lista)agora com \(lista.count) itens")
+
+
+
