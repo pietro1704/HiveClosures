@@ -10,6 +10,7 @@ print("reversa1 = ", reversa1)
 
 
 //infere o tipo pelo contexto (sorted é do tipo (Int, Int) -> Bool)
+//posso omitir o Bool
 var reversa2 = lista.sorted(by: {a, b in return a > b})
 print("reversa2 = ", reversa2)
 
