@@ -20,6 +20,10 @@ executadoPrimeiro { (a:Int) -> () in
 }
 
 executadoPrimeiro { (a) in
+	print("a = ", a)
+}
+
+executadoPrimeiro { (a) in
 	print()
 	print("segunda chamada, com corpo diferente!")
 	print(a+3)

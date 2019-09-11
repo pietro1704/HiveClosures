@@ -27,6 +27,7 @@ var reversa4 = lista.sorted(by: {$0 > $1})
 print("reversa4 = ", reversa4)
 
 let oi:(String) -> () = {print("olá \($0)")}
+
 oi("alunos")
 
 

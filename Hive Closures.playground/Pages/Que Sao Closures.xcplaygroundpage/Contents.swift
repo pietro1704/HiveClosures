@@ -1,6 +1,6 @@
 import UIKit
 
-let soma:(Int, Int) -> Int  = {(a, b) in
+let soma: (Int, Int) -> Int  = {(a, b) in
 	return a+b
 
 }
