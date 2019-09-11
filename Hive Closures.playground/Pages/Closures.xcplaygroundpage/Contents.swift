@@ -13,7 +13,7 @@ func executadoDepois(){
 //na chamada de executadoPrimeiro eu defino o corpo da completion
 executadoPrimeiro { (a:Int) -> () in
 
-	print("primeira chamada, posso chamar a funcao executadoDepois(), olha só")
+	print("primeira chamada da closure, posso chamar a funcao executadoDepois(), olha só")
 	executadoDepois()
 
 	print(a+1)

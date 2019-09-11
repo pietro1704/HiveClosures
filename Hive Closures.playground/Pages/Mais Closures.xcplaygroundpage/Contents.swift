@@ -10,6 +10,7 @@ print("reversa1 = ", reversa1)
 
 
 //infere o tipo pelo contexto (sorted é do tipo (Int, Int) -> Bool)
+//posso omitir o Bool
 var reversa2 = lista.sorted(by: {a, b in return a > b})
 print("reversa2 = ", reversa2)
 
@@ -25,6 +26,10 @@ print("reversa3 = ", reversa3)
 var reversa4 = lista.sorted(by: {$0 > $1})
 print("reversa4 = ", reversa4)
 
+let oi:(String) -> () = {print("olá \($0)")}
+oi("alunos")
+
+
 // < é uma funcao que recebe 2 argumentos e retorna Bool
 var reversa5 = lista.sorted(by: >)
 print("reversa5 = ", reversa4)
@@ -37,5 +42,7 @@ var numeros = [5,6,7,8,9,10]
 
 var resposta = numeros.map({$0 + 10})
 print("resposta do map = ", resposta)
+
+
 
 
