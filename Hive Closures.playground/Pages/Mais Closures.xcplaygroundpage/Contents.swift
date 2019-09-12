@@ -47,5 +47,45 @@ var resposta = numeros.map({$0 + 10})
 print("resposta do map = ", resposta)
 
 
+//isso é uma variável
+var soma:(Int, Int) -> Int = {$0 + $1}
+
+soma(4, 6)
+
+
+func myFunc(x: Int, y: Int, f: (Int,Int) -> Int) -> Int {
+	return f(x,y)
+}
+
+let b = 5
+
+func z() -> Int {
+	let a = 3
+	return myFunc(x: 3, y: 2) { (number1, number2) -> Int in
+		(number1 + number2) * a - b
+	}
+}
+
+func assyncFunc(completion:(Int) -> Void) {
+	//update something asynhcronously
+	let result = 3
+	//Call completion handler to notify who called me
+	completion(result)
+}
+
+//Imagine we are in cellForRow
+//Dequeue cell
+let aCell =  UITableViewCell()
+//Update data assynchronously
+assyncFunc { (value) in
+	//Update the label on the exactly cell
+	//that called...Even if I have called for
+	//hundred thousands different cells!!!!
+	aCell.textLabel?.text = "\(value)"
+}
+
+
+
+
 
 

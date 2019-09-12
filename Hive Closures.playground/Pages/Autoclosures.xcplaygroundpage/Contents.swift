@@ -19,16 +19,20 @@ func proximo(lista imprimePrimeiro: () -> Int) {
 	print("primeiro da lista é \(imprimePrimeiro())!")
 }
 
-//sem autoclosure
+//sem @autoclosure
 proximo(lista: {lista.remove(at: 0)})//2!
+//aqui eu preciso declarar a funcao de closure (chaves {})
 
 
 func proximoAutoclosure(lista imprimePrimeiro: @autoclosure () -> Int) {
 	print()
+	print("lista ainda é ",lista)//3,4,5,6
+
 	print("primeiroAutoclosure da lista é: \(imprimePrimeiro())!")
 }
 
-//com autoclosure = sem chaves <declaracao de funcao de closure>
+//com @autoclosure = sem chaves <declaracao de funcao de closure>
 proximoAutoclosure(lista: lista.remove(at: 0))//3!
+//nao preciso declarar a funcao de closure na chamada
 
 print("lista agora: ", lista)

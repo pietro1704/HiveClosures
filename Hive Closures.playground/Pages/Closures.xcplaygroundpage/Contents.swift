@@ -38,4 +38,8 @@ executadoPrimeiro { (a) in
 	print(a+3)
 }
 
+func funcaoRuim(){
+	print(a)
+}
+
 
