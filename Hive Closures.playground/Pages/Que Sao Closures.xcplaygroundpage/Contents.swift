@@ -15,7 +15,6 @@ let oi = {
 	print("olá \(nome)")
 }
 
-print("ainda nao chamei oi()")
 oi()
 let oi2 = {(name:String) in
 	print("oi \(name)")

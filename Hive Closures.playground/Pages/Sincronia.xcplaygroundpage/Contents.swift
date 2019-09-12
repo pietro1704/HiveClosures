@@ -10,12 +10,14 @@ func sincrona(lista:[Int], imprime: (Int) -> ()){
 	imprime(soma)
 }
 
+//sincrona. Só roda na thread Main
 sincrona(lista: [1, 2, 3, 4, 5]) { (somaParaImprimir) in
 	print("sincrona:")
 	print("a soma da lista é \(somaParaImprimir)")
+	print()
 }
 
-
+//funcao imprime é do tipo Int -> Void
 func assincrona(lista:[Int], imprime: @escaping ((Int)->Void)){
 
 	OperationQueue().addOperation {
@@ -27,9 +29,10 @@ func assincrona(lista:[Int], imprime: @escaping ((Int)->Void)){
 			imprime(soma)
 		}
 	}
+	print()
 }
 
-print("antes da função assincrona:")
+print("antes da função assincrona")
 assincrona(lista: [6, 7, 8, 9]) { (somaAsync) in
 	//Função imprime
 	print("eu sou a função imprime e só executei agora...")
@@ -37,7 +40,8 @@ assincrona(lista: [6, 7, 8, 9]) { (somaAsync) in
 	//acabou a funcao imprime
 }
 
-print("retornou da função assincrona")
+print("retornou da função assincrona pela thread Main")
+print()
 
 
 

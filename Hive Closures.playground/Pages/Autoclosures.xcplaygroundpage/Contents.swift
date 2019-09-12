@@ -1,42 +1,34 @@
 import UIKit
 
-var lista = [1, 2, 3, 4, 5]
-
-let primeiro = lista.remove(at: 0)
-
-//autoclosure = closure criada automaticamente
-//passada como argumento da funcao
-let primeiroClosure = {lista.remove(at: 0)}
-print("lista antes = ", lista)
+var lista = [1,2,3,4,5,6]
+print(lista.count, "itens ")//6 itens
 print()
 
-//elemento não é removido até a closure ser chamada
-print("primeiroClosure = ", primeiroClosure())
-print("lista = ", lista)
+let primeiro = { lista.remove(at: 0) }
+print(lista.count, "itens ")//6 itens
+print()
 
+//lista nao é modificada até primeiro ser chamado...
+print("primeiro da lista: \(primeiro())!")//1!
+print()
+print(lista.count, "itens ")//5 itens
 
-
-func removeLista(item removido: () -> Int){
-	print("removi o item \(removido())")
+//lista = [2,3,4,5,6]
+func proximo(lista imprimePrimeiro: () -> Int) {
+	print()
+	print("primeiro da lista é \(imprimePrimeiro())!")
 }
 
-print()
-print("ainda tenho \(lista.count) itens na lista")
+//sem autoclosure
+proximo(lista: {lista.remove(at: 0)})//2!
 
-removeLista(item: {lista.remove(at: 0)})
 
-print("lista \(lista)agora com \(lista.count) itens")
-
-func removeListaAuto(item removido: @autoclosure () -> Int){
-	print("removi o item \(removido())")
+func proximoAutoclosure(lista imprimePrimeiro: @autoclosure () -> Int) {
+	print()
+	print("primeiroAutoclosure da lista é: \(imprimePrimeiro())!")
 }
 
-print()
-print("ainda tenho \(lista.count) itens na lista")
+//com autoclosure = sem chaves <declaracao de funcao de closure>
+proximoAutoclosure(lista: lista.remove(at: 0))//3!
 
-removeListaAuto(item: lista.remove(at: 0))
-
-print("lista \(lista)agora com \(lista.count) itens")
-
-
-
+print("lista agora: ", lista)

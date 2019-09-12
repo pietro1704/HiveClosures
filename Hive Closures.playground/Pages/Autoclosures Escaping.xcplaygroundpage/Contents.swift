@@ -6,6 +6,8 @@ var listaAntiga = [1,2,3,4,5,6]
 var listaNova: [() -> Int] = []
 
 func insereListaNova(_ item: @autoclosure @escaping () -> Int) {
+	//autoclosure deve ter parametro ()
+
 	listaNova.append(item)
 }
 

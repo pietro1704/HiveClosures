@@ -3,6 +3,8 @@ import UIKit
 let lista = [2,4,3,1,5,6]
 
 //closure como conhecemos
+
+//-------------lista.sorted(by: <#T##(Int, Int) throws -> Bool#>)
 var reversa1 = lista.sorted { (a, b) -> Bool in
 	return a > b
 }
@@ -26,20 +28,20 @@ print("reversa3 = ", reversa3)
 var reversa4 = lista.sorted(by: {$0 > $1})
 print("reversa4 = ", reversa4)
 
+// > é uma funcao que recebe 2 argumentos e retorna Bool
+var reversa5 = lista.sorted(by: >)
+print("reversa5 = ", reversa5)
+
+
+
 let oi:(String) -> () = {print("olá \($0)")}
 
 oi("alunos")
 
 
-// < é uma funcao que recebe 2 argumentos e retorna Bool
-var reversa5 = lista.sorted(by: >)
-print("reversa5 = ", reversa4)
-
-
-
 //funcao map
+//--numeros.map(<#T##transform: (Int) throws -> T##(Int) throws -> T#>)
 var numeros = [5,6,7,8,9,10]
-//numeros.map(<#T##transform: (Int) throws -> T##(Int) throws -> T#>)
 
 var resposta = numeros.map({$0 + 10})
 print("resposta do map = ", resposta)

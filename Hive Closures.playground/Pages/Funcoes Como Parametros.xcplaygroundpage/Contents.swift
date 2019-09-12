@@ -21,12 +21,14 @@ func makeIncrementer(forIncrement amount: Int) -> () -> Int {
 
 //incrementByTen é uma funcao (retorno de makeIncrementer)
 let incrementByTen = makeIncrementer(forIncrement: 10)
+//só chamei makeIncrementer aqui, esse é o único ponto em que zera o runningTotal
 
 incrementByTen()
 
 incrementByTen()
 
 let incrementBySeven = makeIncrementer(forIncrement: 7)
+//zera o runningTotal de novo para o incrementBySeven
 
 incrementBySeven()
 
