@@ -38,7 +38,7 @@ executadoPrimeiro { (a) in
 	print(a+3)
 }
 
-func funcaoRuim(){
+func funcaoNaoEnxerga(){
 	print(a)
 }
 

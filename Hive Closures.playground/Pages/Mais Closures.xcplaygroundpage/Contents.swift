@@ -2,8 +2,6 @@ import UIKit
 
 let lista = [2,4,3,1,5,6]
 
-//closure como conhecemos
-
 //-------------lista.sorted(by: <#T##(Int, Int) throws -> Bool#>)
 var reversa1 = lista.sorted { (a, b) -> Bool in
 	return a > b
