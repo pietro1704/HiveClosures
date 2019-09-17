@@ -8,8 +8,10 @@ let soma: (Int, Int) -> Int  = {(a, b) in
 soma(2, 3)
 
 //encadeamento de funcoes
-soma(soma(2, 4), soma(soma(1, 2), 3))
-
+let lista = [4,5,8,2,9,7]
+let somaMaior7 = lista.filter{$0 >= 7}.reduce(0, +)
+//8 + 9 + 7 = 24
+print(somaMaior7)
 
 
 

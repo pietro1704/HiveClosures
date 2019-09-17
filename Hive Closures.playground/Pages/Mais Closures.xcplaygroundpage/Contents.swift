@@ -8,6 +8,20 @@ var reversa1 = lista.sorted { (a, b) -> Bool in
 }
 print("reversa1 = ", reversa1)
 
+//ordenação esdrúxula
+//ordeno primeiro os pares e depois os impares
+lista.sorted { (a, b) -> Bool in
+	if a % 2 == 0{
+		if b % 2 == 0 {
+			return a < b
+		}else{
+			return true//a antes do b
+		}
+	}else{
+		return false//b antes do a
+	}
+}
+
 
 //infere o tipo pelo contexto (sorted é do tipo (Int, Int) -> Bool)
 //posso omitir o Bool
@@ -22,7 +36,6 @@ print("reversa3 = ", reversa3)
 //podemos pegar os argumentos da closure diretamente
 //closure sorted recebe (a, b) = ($0, $1)
 //-------lista.sorted(by: <#T##(Int, Int) throws -> Bool#>)
-
 var reversa4 = lista.sorted(by: {$0 > $1})
 print("reversa4 = ", reversa4)
 
@@ -50,6 +63,20 @@ print("resposta do map = ", resposta)
 var soma:(Int, Int) -> Int = {$0 + $1}
 
 soma(4, 6)
+
+//filter-->pega os que passam no filtro
+let pares = lista.filter { $0 % 2 == 0}
+print(pares)
+
+//reduce-->junta a lista toda por uma funcao(closure) definida por voce
+lista.reduce(100, +)
+
+let listaNomes = ["alan", "brian", "charlie"]
+
+let listaReduce = listaNomes.reduce("====") { (text, name) in "\(text)--\(name)"
+}
+print(listaReduce)
+
 
 
 func myFunc(x: Int, y: Int, f: (Int,Int) -> Int) -> Int {
