@@ -1,12 +1,12 @@
 import UIKit
 
 //passo a funcao de completion como parâmetro para ser usada aqui dentro
-func executadoPrimeiro(completion: (Int) -> ()){
+func executadoPrimeiro(closure: (Int) -> ()){
 	print()
 	print("executado primeiro")
 
 	//posso usar a funcao de completion pq foi passada como parametro
-	completion(2)
+	closure(2)
 }
 
 func executadoDepois(){
