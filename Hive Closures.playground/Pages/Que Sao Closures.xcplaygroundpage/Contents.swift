@@ -10,6 +10,9 @@ soma(2, 3)
 //encadeamento de funcoes
 soma(soma(2, 4), soma(soma(1, 2), 3))
 
+
+
+
 let nomeFora = "nomeFora"
 
 func printNome(completion: (String) -> ()){

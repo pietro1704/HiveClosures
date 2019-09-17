@@ -5,9 +5,9 @@
         <page name='Closures'/>
         <page name='Mais Closures'/>
         <page name='Que Sao Closures'/>
-        <page name='Sincronia'/>
         <page name='Funcoes Como Parametros'/>
         <page name='Autoclosures'/>
         <page name='Autoclosures Escaping'/>
+        <page name='Sincronia'/>
     </pages>
 </playground>
