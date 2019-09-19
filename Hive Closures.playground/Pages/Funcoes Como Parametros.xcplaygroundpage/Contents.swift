@@ -20,22 +20,25 @@ func makeIncrementer(forIncrement amount: Int) -> () -> Int {
 }
 
 //incrementByTen é uma funcao (retorno de makeIncrementer)
+//incrementByTen()->Int
 let incrementByTen = makeIncrementer(forIncrement: 10)
+
 //só chamei makeIncrementer aqui, esse é o único ponto em que zera o runningTotal
 
-incrementByTen()
 
-incrementByTen()
+incrementByTen()//incrementa o valor capturado
+
+
+incrementByTen()//incrementa o mesmo valor
 
 let incrementBySeven = makeIncrementer(forIncrement: 7)
 //zera o runningTotal de novo para o incrementBySeven
 
-incrementBySeven()
+incrementBySeven()//incrementa outro valor
 
-incrementByTen()
-
+incrementByTen()//incrementa o valor capturado pelo incrementByTen
 
 //passagem por referencia, nao cria outro contador
 let outroIncrementByTen = incrementByTen
 
-outroIncrementByTen()
+outroIncrementByTen()//referencia -> incrementa o mesmo valor capturado pelo incrementByTen

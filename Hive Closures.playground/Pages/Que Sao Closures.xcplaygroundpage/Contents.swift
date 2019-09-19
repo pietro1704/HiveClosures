@@ -1,8 +1,8 @@
 import UIKit
 
+//fucao como variável
 let soma: (Int, Int) -> Int  = {(a, b) in
 	return a+b
-
 }
 
 soma(2, 3)
@@ -12,7 +12,6 @@ let lista = [4,5,8,2,9,7]
 let somaMaior7 = lista.filter{$0 >= 7}.reduce(0, +)
 //8 + 9 + 7 = 24
 print(somaMaior7)
-
 
 
 let nomeFora = "nomeFora"

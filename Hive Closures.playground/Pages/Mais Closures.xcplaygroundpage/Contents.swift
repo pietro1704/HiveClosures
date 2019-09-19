@@ -97,7 +97,7 @@ func z() -> Int {
 }
 
 func assyncFunc(completion:(Int) -> Void) {
-	//update something asynhcronously
+	//update something asynchronously
 	let result = 3
 	//Call completion handler to notify who called me
 	completion(result)
@@ -113,6 +113,7 @@ assyncFunc { (value) in
 	//hundred thousands different cells!!!!
 	aCell.textLabel?.text = "\(value)"
 }
+//exemplo: captura o valor de cada diferente contexto para as 1.000.000 celulas
 
 
 

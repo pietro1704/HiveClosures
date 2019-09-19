@@ -13,19 +13,14 @@ func executadoDepois(){
 	print("executado depois")
 }
 
-//na chamada de executadoPrimeiro eu defino o corpo da completion
 executadoPrimeiro { (a) in
-// a é o parametro de completion definido em executadoPrimeiro
 
 	//posso até chamar outras funcoes
 	executadoDepois()
 
 	print(a*3)
 }
-//rodar até aqui para testar
 
-
-//posso executar a funcao definindo completion de jeito diferente
 executadoPrimeiro { (a) in
 
 	//tenta digitar a chamada de executadoPrimeiro e aperte enter no placeholder :)
