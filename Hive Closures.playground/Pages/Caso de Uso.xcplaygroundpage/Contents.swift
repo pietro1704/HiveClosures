@@ -26,7 +26,7 @@ public func wrongGetAddressFromCoordinate(point: CLLocation) -> String? {
                 addressTxt = city + ", " + state
             }
         }
-    })
+    })//até aqui foi a declaracao da closure(o completion handler), na chamada do reverseGeocodeLocation
 
     return addressTxt
 
