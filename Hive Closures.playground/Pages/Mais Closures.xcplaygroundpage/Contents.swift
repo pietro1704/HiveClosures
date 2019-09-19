@@ -18,7 +18,11 @@ lista.sorted { (a, b) -> Bool in
 			return true//a antes do b
 		}
 	}else{
-		return false//b antes do a
+		if b % 2 == 1{
+			return a < b
+		}else{
+			return false//b antes do a
+		}
 	}
 }
 

@@ -9,6 +9,5 @@
         <page name='Autoclosures'/>
         <page name='Sincronia'/>
         <page name='Autoclosures Escaping'/>
-        <page name='Caso de Uso'/>
     </pages>
 </playground>
