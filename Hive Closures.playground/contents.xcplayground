@@ -9,5 +9,7 @@
         <page name='Autoclosures'/>
         <page name='Sincronia'/>
         <page name='Autoclosures Escaping'/>
+        <page name='Caso de Uso'/>
+        <page name='Dark Mode'/>
     </pages>
 </playground>

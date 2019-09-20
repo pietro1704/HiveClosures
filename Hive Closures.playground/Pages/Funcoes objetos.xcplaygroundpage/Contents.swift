@@ -47,6 +47,5 @@ func multiplica(por multiplicador: Int) -> ((Int) -> Int) {
 }
 
 let duplica = multiplica(por: 2)
-
 duplica(3)
 duplica(8)
